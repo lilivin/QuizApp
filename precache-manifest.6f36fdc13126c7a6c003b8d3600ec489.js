@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c7e0d0d29bbde1712072bd36ae11b8b1",
+    "revision": "bbe14a1048c8346c2eb35753a26c95be",
     "url": "/QuizApp/index.html"
   },
   {
-    "revision": "f55e2821ee1f5d7a5225",
+    "revision": "40f70fbf3026d4994d99",
     "url": "/QuizApp/static/css/main.4792e6a5.chunk.css"
   },
   {
-    "revision": "b1357f39e001c573a9e9",
-    "url": "/QuizApp/static/js/2.9801fc83.chunk.js"
+    "revision": "d670c50b8ea4a9680adb",
+    "url": "/QuizApp/static/js/2.f47a9c3c.chunk.js"
   },
   {
     "revision": "f42d151f61898dd9d5ffe0d9c5238b3c",
-    "url": "/QuizApp/static/js/2.9801fc83.chunk.js.LICENSE.txt"
+    "url": "/QuizApp/static/js/2.f47a9c3c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f55e2821ee1f5d7a5225",
-    "url": "/QuizApp/static/js/main.aef5f849.chunk.js"
+    "revision": "40f70fbf3026d4994d99",
+    "url": "/QuizApp/static/js/main.8e153092.chunk.js"
   },
   {
     "revision": "553ecaa52dc12743a190",
