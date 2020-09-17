@@ -7,7 +7,7 @@ import Quizy from './Quizy';
 import Home from './Home';
 import News from './News';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Link
@@ -18,7 +18,7 @@ class App extends Component {
  
   render() {
     return (
-      <Router>
+      <HashRouter basename='/'>
       <div>
 
         <Switch>
@@ -36,7 +36,7 @@ class App extends Component {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </HashRouter>
     );
   }
 }
