@@ -1,0 +1,99 @@
+body{
+    background-color: #d14657;
+}
+
+.exitButton{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 3rem;
+    z-index: 10000;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        transform: scale(1.2) rotate(360deg);
+    }
+}
+
+.quizContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-around;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    position: relative;
+    @media(min-width: 769px){
+        margin: 0;
+    }
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    transition: 1s;
+    &:hover .quizCarddwa{
+        transform: rotate(5deg);
+    }
+    &:hover .quizCard{
+        transform: rotate(5deg);
+    }
+}
+
+.quizCarddwa{
+    margin: 40px 50px;
+    border: 2px solid black;
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    z-index: -10;
+    background-color: white;
+    border-radius: 20px;
+    transform: rotate(10deg);
+    transition: .4s;
+}
+
+.quizCardtrzy{
+    margin: 40px 50px;
+    border: 2px solid black;
+    height: 300px;
+    width: 200px;
+    position: absolute;
+    z-index: -10;
+    background-color: white;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    
+}
+
+.quizCard {
+    margin: 40px 50px;
+    border: 4px solid black;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    border-radius: 20px;
+    background-size: cover;
+    z-index: 10;
+    background-color: white;
+    transition: .4s;
+    &__second{
+        border: 2px solid black;
+        height: 100%;
+    }
+    &__header{
+        font-size: 1.4rem;
+    }
+    &__description{
+        font-size: .8rem;
+    }
+    &__image{
+        width: 70%;
+        border-radius: 50%;
+        margin-top: 20px;
+        border: 3px solid black;
+    }
+}

@@ -1,0 +1,68 @@
+.homeScreen{
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgb(252, 240, 240);
+    padding: 20px 0;
+    display: block;
+    height: 100%;
+    @media(min-width: 768px){
+        display: flex;
+        justify-content: space-around;
+        height: 100vh;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+}
+
+.option{
+    background-size: cover;
+    position: relative;
+    height: 90vw;
+    display: block;
+    width: 90vw;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+    background-color: black;
+    box-shadow: -1px 2px 54px -15px rgba(0,0,0,0.75);
+    &:nth-of-type(1){
+        margin: 40px auto;
+    }
+    @media(min-width: 769px){
+        width: 250px;
+        margin: 20px 0;
+        height: 250px;
+    }
+    @media(min-width: 1100px){
+        width: 30vw;
+        height: 30vw;
+    }
+    &__text{
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        color: white;
+        transform: translateX(-50%);
+        font-weight: 600;
+    }
+    &:hover{
+        transform: scale(1.1) rotate(5deg);
+    }
+}
+
+.quizy {
+    background-image: url('../Photos/quiz.svg');
+}
+
+.aktualnosci {
+    background-image: url('../Photos/aktualnosci.svg');
+}
+
+.omnie {
+    background-image: url('../Photos/aboutMe.svg');
+}
