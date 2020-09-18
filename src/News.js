@@ -9,48 +9,40 @@ import MailchimpSubscribe from "react-mailchimp-subscribe"
 import { noAuto } from '@fortawesome/fontawesome-svg-core';
 
 const CustomForm = ({ status, message, onValidated }) => {
-  let email, name;
+  let email;
   const submit = () =>
     email &&
-    name &&
     email.value.indexOf("@") > -1 &&
     onValidated({
       EMAIL: email.value,
-      NAME: name.value
     });
 
   return (
-    <div
-      style={{
-        borderRadius: 2,
-        padding: 10,
-        display: "flex"
-      }}
-    >
-      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+    <div className="newsletterContainer">
+      {status === "sending" && <div className="newsletterContainer__info">sending...</div>}
       {status === "error" && (
         <div
-          style={{ color: "red" }}
+          className="newsletterContainer__info"
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       {status === "success" && (
         <div
-          style={{ color: "green" }}
+        className="newsletterContainer__info"
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      <br />
-      <input
-        style={{ fontSize: "2em", padding: 5, height: 50, border: 'none', borderTopLeftRadius: 20, borderBottomLeftRadius: 20 }}
-        ref={node => (email = node)}
-        type="email"
-        placeholder="Your email"
-      />
-      <br />
-      <button style={{ fontSize: "2em", padding: 5, borderTopRightRadius: 20, borderBottomRightRadius: 20, border: "none" }} onClick={submit}>
-        Submit
-      </button>
+      <div className="newsletter">
+        <input
+          className="newsletter__input"
+          ref={node => (email = node)}
+          type="email"
+          placeholder="Your email..."
+        />
+        <button className="newsletter__button" onClick={submit}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 };
