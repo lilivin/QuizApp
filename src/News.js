@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import MailchimpSubscribe from "react-mailchimp-subscribe"
+import { noAuto } from '@fortawesome/fontawesome-svg-core';
 
 const CustomForm = ({ status, message, onValidated }) => {
   let email, name;
@@ -21,10 +22,9 @@ const CustomForm = ({ status, message, onValidated }) => {
   return (
     <div
       style={{
-        background: "#efefef",
         borderRadius: 2,
         padding: 10,
-        display: "inline-block"
+        display: "flex"
       }}
     >
       {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
@@ -40,21 +40,15 @@ const CustomForm = ({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      <input
-        style={{ fontSize: "2em", padding: 5 }}
-        ref={node => (name = node)}
-        type="text"
-        placeholder="Your name"
-      />
       <br />
       <input
-        style={{ fontSize: "2em", padding: 5 }}
+        style={{ fontSize: "2em", padding: 5, height: 50, border: 'none', borderTopLeftRadius: 20, borderBottomLeftRadius: 20 }}
         ref={node => (email = node)}
         type="email"
         placeholder="Your email"
       />
       <br />
-      <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+      <button style={{ fontSize: "2em", padding: 5, borderTopRightRadius: 20, borderBottomRightRadius: 20, border: "none" }} onClick={submit}>
         Submit
       </button>
     </div>
