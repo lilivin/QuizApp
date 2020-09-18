@@ -7,24 +7,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
-const MyForm = ({ status, message, onValidated }) => {
-    let email, name;
-    const submit = () =>
-        email &&
-        name &&
-        email.value.indexOf("@") > -1 &&
-        onValidated({
-            EMAIL: email.value,
-            NAME: name.value
-        });
-    return (
-        <form>
-            <input placeholder="chuj" type="email" />
-            <button onClick={submit}>
-                Submit
-            </button>
-        </form>
-    );
+const CustomForm = ({ status, message, onValidated }) => {
+  let email, name;
+  const submit = () =>
+    email &&
+    name &&
+    email.value.indexOf("@") > -1 &&
+    onValidated({
+      EMAIL: email.value,
+      NAME: name.value
+    });
+
+  return (
+    <div className="newsletter">
+      <input
+        className="newsletter__input"
+        ref={node => (email = node)}
+        type="email"
+        placeholder="Wpisz email..."
+      />
+      <button className="newsletter__button" onClick={submit}>
+        Zapisz sie!
+      </button>
+    </div>
+  );
 };
 
 function News() {
@@ -34,19 +40,14 @@ function News() {
             <Link to="/">
                 <FontAwesomeIcon className="exitButton" icon={faTimes} />
             </Link>
-            <div className="newsletter">
-                <input placeholder="Wpisz adres email..." className="newsletter__input" />
-                <button className="newsletter__button">Zapisz się!</button>
-            </div>
             <MailchimpSubscribe
                 url={url}
                 render={({ subscribe, status, message }) => (
-                <div>
-                    <MyForm onSubmitted={formData => subscribe(formData)} />
-                    {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-                    {status === "error" && <div style={{ color: "red" }} dangerouslySetInnerHTML={{__html: message}}/>}
-                    {status === "success" && <div style={{ color: "green" }}>Subscribed !</div>}
-                </div>
+                    <CustomForm
+                    status={status}
+                    message={message}
+                    onValidated={formData => subscribe(formData)}
+                    />
                 )}
             />
         </div>
