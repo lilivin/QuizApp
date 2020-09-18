@@ -19,15 +19,43 @@ const CustomForm = ({ status, message, onValidated }) => {
     });
 
   return (
-    <div className="newsletter">
+    <div
+      style={{
+        background: "#efefef",
+        borderRadius: 2,
+        padding: 10,
+        display: "inline-block"
+      }}
+    >
+      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
+      {status === "error" && (
+        <div
+          style={{ color: "red" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === "success" && (
+        <div
+          style={{ color: "green" }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
       <input
-        className="newsletter__input"
+        style={{ fontSize: "2em", padding: 5 }}
+        ref={node => (name = node)}
+        type="text"
+        placeholder="Your name"
+      />
+      <br />
+      <input
+        style={{ fontSize: "2em", padding: 5 }}
         ref={node => (email = node)}
         type="email"
-        placeholder="Wpisz email..."
+        placeholder="Your email"
       />
-      <button className="newsletter__button" onClick={submit}>
-        Zapisz sie!
+      <br />
+      <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+        Submit
       </button>
     </div>
   );
@@ -41,14 +69,14 @@ function News() {
                 <FontAwesomeIcon className="exitButton" icon={faTimes} />
             </Link>
             <MailchimpSubscribe
-                url={url}
-                render={({ subscribe, status, message }) => (
-                    <CustomForm
-                    status={status}
-                    message={message}
-                    onValidated={formData => subscribe(formData)}
-                    />
-                )}
+              url={url}
+              render={({ subscribe, status, message }) => (
+                <CustomForm
+                  status={status}
+                  message={message}
+                  onValidated={formData => subscribe(formData)}
+                />
+              )}
             />
         </div>
     )
