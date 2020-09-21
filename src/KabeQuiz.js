@@ -12,7 +12,7 @@ import { DB_CONFIG } from './Config/Firebase/db_config';
 import Loader from 'react-loader-spinner'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
-class SanahQuiz extends Component {
+class KabeQuiz extends Component {
   constructor(props){
     super(props);
     this.updateCard = this.updateCard.bind(this);
@@ -32,7 +32,7 @@ class SanahQuiz extends Component {
       firebase.initializeApp(DB_CONFIG)
     }
 
-    firebase.database().ref().child("SanahQuestions").on('child_added', snap => {
+    firebase.database().ref().child("KabeQuestions").on('child_added', snap => {
       currentCards.push({
         id: snap.key,
         question: snap.val().question,
@@ -95,7 +95,7 @@ class SanahQuiz extends Component {
                             answerLength={this.state.cards.length}
                             drawCard={this.updateCard}
                             questionNumber={this.state.questionNumber}
-                            quizName="SanahQuiz"
+                            quizName="KabeQuiz"
                         />
                     </div>
                 </div>
@@ -105,4 +105,4 @@ class SanahQuiz extends Component {
   }
 }
 
-export default SanahQuiz;
+export default KabeQuiz;

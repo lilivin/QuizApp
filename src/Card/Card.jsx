@@ -27,7 +27,11 @@ function Card(props) {
         if(props.correctAnswer !== radioValue) {
             document.getElementById('cardFront').innerHTML = `
             <h1 className='result'>Koniec</h1>
-            <p>`+ points + ` / 20</p>
+            <div>
+                <h1>Twój wynik</h1>
+                <p>`+ points + ` / 20</p>
+            </div>
+            <h1 className="greatings">Dziękujemy za gre!</h1>
         `
         } else{
             document.getElementById('cardFront').innerHTML = `
@@ -36,11 +40,7 @@ function Card(props) {
                 <h1>Twój wynik</h1>
                 <p>`+ (points + 1) + ` / 20</p>
             </div>
-            <div>
-                <button>Jeszcze raz</button>
-                <button>Powrót</button>
-            </div>
-            
+            <h1 className="greatings">Dziękujemy za gre!</h1>
         `
         }
         
@@ -83,7 +83,7 @@ function Card(props) {
                     
                 </div>
                 <div className="front back">
-                    <h1>Sanah Quiz</h1>
+                    <h1 className="cardBack">{props.quizName}</h1>
                 </div>
             </div>
         </div>

@@ -6,6 +6,10 @@ import SanahQuiz from './SanahQuiz';
 import Quizy from './Quizy';
 import Home from './Home';
 import News from './News';
+import AboutUs from './AboutUs';
+import MarkowskiQuiz from './MarkowskiQuiz';
+import KabeQuiz from './KabeQuiz';
+import QuebinafideQuiz from './QuebonafideQuiz';
 import {
   HashRouter,
   Switch,
@@ -29,10 +33,22 @@ class App extends Component {
             <Quizy />
           </Route>
           <Route path="/SanahQuiz">
-            <SanahQuiz />
+            <SanahQuiz/>
+          </Route>
+          <Route path="/MarkowskiQuiz">
+            <MarkowskiQuiz/>
+          </Route>
+          <Route path="/KabeQuiz">
+            <KabeQuiz/>
+          </Route>
+          <Route path="/QuebonafideQuiz">
+            <QuebinafideQuiz/>
           </Route>
           <Route path="/news">
             <News />
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs />
           </Route>
         </Switch>
       </div>

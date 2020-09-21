@@ -20,9 +20,9 @@ function Home() {
             </div>
           </Link>
 
-          <Link className="link" to="/users">
+          <Link className="link" to="/aboutUs">
             <div className="option omnie">
-              <h1 className="option__text">O mnie</h1>
+              <h1 className="option__text">O Nas</h1>
             </div>
           </Link>
         </div>

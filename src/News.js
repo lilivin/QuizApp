@@ -19,6 +19,17 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <div className="newsletterContainer">
+      <div className="newsletter">
+        <input
+          className="newsletter__input"
+          ref={node => (email = node)}
+          type="email"
+          placeholder="Your email..."
+        />
+        <button className="newsletter__button" onClick={submit}>
+          Submit
+        </button>
+      </div>
       {status === "sending" && <div className="newsletterContainer__info">sending...</div>}
       {status === "error" && (
         <div
@@ -32,17 +43,6 @@ const CustomForm = ({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      <div className="newsletter">
-        <input
-          className="newsletter__input"
-          ref={node => (email = node)}
-          type="email"
-          placeholder="Your email..."
-        />
-        <button className="newsletter__button" onClick={submit}>
-          Submit
-        </button>
-      </div>
     </div>
   );
 };
