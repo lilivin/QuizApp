@@ -1,24 +1,32 @@
 {
   "files": {
-    "main.css": "/QuizApp/static/css/main.a48d43cb.chunk.css",
-    "main.js": "/QuizApp/static/js/main.c402e7a7.chunk.js",
-    "main.js.map": "/QuizApp/static/js/main.c402e7a7.chunk.js.map",
+    "main.css": "/QuizApp/static/css/main.0e0bccd8.chunk.css",
+    "main.js": "/QuizApp/static/js/main.a1ecb21a.chunk.js",
+    "main.js.map": "/QuizApp/static/js/main.a1ecb21a.chunk.js.map",
     "runtime-main.js": "/QuizApp/static/js/runtime-main.ca1486b2.js",
     "runtime-main.js.map": "/QuizApp/static/js/runtime-main.ca1486b2.js.map",
-    "static/js/2.9762e482.chunk.js": "/QuizApp/static/js/2.9762e482.chunk.js",
-    "static/js/2.9762e482.chunk.js.map": "/QuizApp/static/js/2.9762e482.chunk.js.map",
+    "static/css/2.bbf03e9b.chunk.css": "/QuizApp/static/css/2.bbf03e9b.chunk.css",
+    "static/js/2.e4793bf9.chunk.js": "/QuizApp/static/js/2.e4793bf9.chunk.js",
+    "static/js/2.e4793bf9.chunk.js.map": "/QuizApp/static/js/2.e4793bf9.chunk.js.map",
     "index.html": "/QuizApp/index.html",
-    "precache-manifest.022e4043486f7b9661b19da5c486cecf.js": "/QuizApp/precache-manifest.022e4043486f7b9661b19da5c486cecf.js",
+    "precache-manifest.75b6c1647ab4b9514624203249de3de0.js": "/QuizApp/precache-manifest.75b6c1647ab4b9514624203249de3de0.js",
     "service-worker.js": "/QuizApp/service-worker.js",
-    "static/css/main.a48d43cb.chunk.css.map": "/QuizApp/static/css/main.a48d43cb.chunk.css.map",
-    "static/js/2.9762e482.chunk.js.LICENSE.txt": "/QuizApp/static/js/2.9762e482.chunk.js.LICENSE.txt",
+    "static/css/2.bbf03e9b.chunk.css.map": "/QuizApp/static/css/2.bbf03e9b.chunk.css.map",
+    "static/css/main.0e0bccd8.chunk.css.map": "/QuizApp/static/css/main.0e0bccd8.chunk.css.map",
+    "static/js/2.e4793bf9.chunk.js.LICENSE.txt": "/QuizApp/static/js/2.e4793bf9.chunk.js.LICENSE.txt",
+    "static/media/Kabe.jpg": "/QuizApp/static/media/Kabe.cc6372a1.jpg",
+    "static/media/Markowski.jpg": "/QuizApp/static/media/Markowski.afd8aa34.jpg",
+    "static/media/Quebonafide.jpg": "/QuizApp/static/media/Quebonafide.95ad908d.jpg",
     "static/media/Sanah.jpg": "/QuizApp/static/media/Sanah.5b6cc9a1.jpg",
-    "static/media/Home.scss": "/QuizApp/static/media/quiz.a69513b0.svg"
+    "static/media/Home.scss": "/QuizApp/static/media/quiz.a69513b0.svg",
+    "static/media/karolPhoto.jpg": "/QuizApp/static/media/karolPhoto.f5f873bd.jpg",
+    "static/media/sonikPhoto.jpg": "/QuizApp/static/media/sonikPhoto.e60b5f09.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ca1486b2.js",
-    "static/js/2.9762e482.chunk.js",
-    "static/css/main.a48d43cb.chunk.css",
-    "static/js/main.c402e7a7.chunk.js"
+    "static/css/2.bbf03e9b.chunk.css",
+    "static/js/2.e4793bf9.chunk.js",
+    "static/css/main.0e0bccd8.chunk.css",
+    "static/js/main.a1ecb21a.chunk.js"
   ]
 }
